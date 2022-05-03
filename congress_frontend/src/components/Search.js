@@ -4,6 +4,10 @@ const Search = () => {
 
     const [address, setAddress] = useState("")
 
+    const handleOnChange = event => {
+        event.preventDefault();
+    }
+
     return(
         <div className="search-bar">
             <form>
@@ -11,6 +15,7 @@ const Search = () => {
                     type="text"
                     className="form-entry"
                     placeholder="Your Address Here..."
+                    onChange={handleOnChange}
                 />
             </form>
         </div>
