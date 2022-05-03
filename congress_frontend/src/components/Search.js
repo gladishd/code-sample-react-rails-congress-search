@@ -6,6 +6,8 @@ const Search = () => {
 
     const handleOnChange = event => {
         event.preventDefault();
+        const value = event.target.value;
+        setAddress(value);
     }
 
     return(
