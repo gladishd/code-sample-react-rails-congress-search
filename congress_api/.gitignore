@@ -31,5 +31,4 @@
 /config/master.key
 
 #Ignore DistrictsController
-
 /controllers/districts_controller.rb
