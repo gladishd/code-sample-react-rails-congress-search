@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Search = () => {
+
+    const [address, setAddress] = useState("")
+
     return(
         <div className="search-bar">
             <form>
