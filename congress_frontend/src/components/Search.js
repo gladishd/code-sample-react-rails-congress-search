@@ -16,6 +16,7 @@ const Search = () => {
                     className="form-entry"
                     placeholder="Your Address Here..."
                     onChange={handleOnChange}
+                    value={address.value}
                 />
             </form>
         </div>
