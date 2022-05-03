@@ -34,3 +34,5 @@ const ResultsCard = () => {
         </div>
     )
 }
+
+export default ResultsCard;
