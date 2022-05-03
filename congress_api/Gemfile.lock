@@ -67,6 +67,9 @@ GEM
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.5)
     geocodio (3.0.0)
@@ -152,6 +155,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   dotenv
+  dotenv-rails
   geocodio
   listen (~> 3.3)
   puma (~> 5.0)
