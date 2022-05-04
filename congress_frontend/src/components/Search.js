@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Search = () => {
 
-    const [address, setAddress] = useState("")
+    const [address, setAddress] = useState("1600 Pennsylvania Ave.")
 
     const handleOnChange = event => {
         event.preventDefault();
@@ -11,7 +11,7 @@ const Search = () => {
     }
 
     useEffect(() => {
-        fetch(`https://localhost:3001/get_districts?address=${address}`)
+        fetch(`http://localhost:3001/get_districts?address=${address}`)
         .then(resp => resp.json())
         .then(data => {
             if (data.error){
@@ -20,7 +20,7 @@ const Search = () => {
                 setAddress(data)
             }
         })
-    },[])
+    },[address])
 
     return(
         <div className="search-bar">
