@@ -1,6 +1,8 @@
 import React from 'react';
 
 const ResultsCard = () => {
+
+    
     return(
         <div className="card">
             <h3>Your District:</h3>
