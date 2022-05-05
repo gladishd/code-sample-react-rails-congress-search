@@ -5,16 +5,16 @@ import { updateSearchForm } from '../actions/search';
 const Search = ({ search, updateSearchForm }) => {
 
     useEffect(() => {
-        fetch(`http://localhost:3001/get_districts?address=${search}`)
+        fetch(`http://localhost:3001/get_districts?search=${search}`)
         .then(resp => resp.json())
          .then(data => {
             if (data.error){
                 console.log("Something went wrong.")
             } else {
-                 console.log(data)
+                 updateSearchForm(data)
             }
         })
-    },[search])
+    },[search, updateSearchForm])
 
     const handleOnChange = event => {
         event.preventDefault();
