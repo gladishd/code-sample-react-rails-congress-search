@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Search = () => {
 
-    const [address, setAddress] = useState("1600 Pennsylvania Ave.")
+    const [address, setAddress] = useState("1600 Pennsylvania Ave Washington DC 20500")
 
     const handleOnChange = event => {
         event.preventDefault();
