@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 
 const Search = ({ search, updateSearchForm }) => {
-
+    
     useEffect(() => {
-        fetch(`http://localhost:3001/get_districts?search=${search}`)
+        fetch(`http://localhost:3001/get_districts?search=${search.value}`)
         .then(resp => resp.json())
          .then(data => {
             if (data.error){
