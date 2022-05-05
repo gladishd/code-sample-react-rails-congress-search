@@ -3,24 +3,18 @@ import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 
 const Search = ({ search, updateSearchForm }) => {
-    
-    //const handleOnChange = event => {
-    //    event.preventDefault();
-    //    const value = event.target.value;
-    //    setAddress(value);
-    //}
 
-    //useEffect(() => {
-    //    fetch(`http://localhost:3001/get_districts?address=${address}`)
-    //    .then(resp => resp.json())
-    //     .then(data => {
-    //        if (data.error){
-    //            console.log("Something went wrong.")
-    //        } else {
-    //             setAddress(data)
-    //        }
-    //    })
-    //},[address])
+    useEffect(() => {
+        fetch(`http://localhost:3001/get_districts?address=${search}`)
+        .then(resp => resp.json())
+         .then(data => {
+            if (data.error){
+                console.log("Something went wrong.")
+            } else {
+                 console.log(data)
+            }
+        })
+    },[search])
 
     const handleOnChange = event => {
         event.preventDefault();
