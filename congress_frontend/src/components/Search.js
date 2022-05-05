@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 
 const Search = ({ search, updateSearchForm }) => {
-
-    //const [address, setAddress] = useState("1600 Pennsylvania Ave Washington DC 20500")
     
     //const handleOnChange = event => {
     //    event.preventDefault();
