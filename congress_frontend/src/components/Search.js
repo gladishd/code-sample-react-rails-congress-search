@@ -39,4 +39,10 @@ const Search = () => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        search: state.searchReducer
+    }
+}
+
 export default Search;
