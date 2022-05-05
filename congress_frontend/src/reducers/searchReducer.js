@@ -1,5 +1,5 @@
 const initState = {
-    value: ""
+    value: "1600 Pennsylvania Ave Washington, DC 20500"
 }
 
 const searchReducer = (state = initState, action) => {
