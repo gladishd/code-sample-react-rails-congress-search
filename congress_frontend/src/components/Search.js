@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 
-const Search = () => {
+const Search = ({ search, updateSearchForm }) => {
 
     //const [address, setAddress] = useState("1600 Pennsylvania Ave Washington DC 20500")
     
@@ -23,6 +23,16 @@ const Search = () => {
     //        }
     //    })
     //},[address])
+
+    const handleOnChange = event => {
+        event.preventDefault();
+        const value = event.target.value;
+        const updatedData = {
+            ...search,
+            value
+        };
+        updateSearchForm(updatedData);
+    }
 
     return(
         <div className="search-bar">
