@@ -1,4 +1,4 @@
-const districtReducer = (state = null, action) => {
+const districtReducer = (state = "", action) => {
     switch(action.type){
         case "SET_DISTRICT":
             return action.district
