@@ -29,7 +29,7 @@ const Search = ({ search, updateSearchForm, setDistrict }) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(search)
+        setDistrict(search.value)
     }
 
     return(
