@@ -6,6 +6,6 @@ class DistrictsController < ApplicationController
         addressString = params["search"]
         geocodio = Geocodio::Client.new(ENV["API_KEY"])
         location = geocodio.geocode([addressString], fields: %w[cd]).best
-        render json: location
+        district = location.congressional_districts
     end
 end
