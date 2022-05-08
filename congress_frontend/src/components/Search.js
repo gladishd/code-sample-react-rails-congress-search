@@ -53,7 +53,8 @@ const Search = ({ search, updateSearchForm, setDistrict }) => {
 
 const mapStateToProps = state => {
     return {
-        search: state.searchReducer
+        search: state.searchReducer,
+        district: state.districtReducer
     }
 }
 
