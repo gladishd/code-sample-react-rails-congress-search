@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
 const Search = ({ search, updateSearchForm, setDistrict }) => {
     
-    //useEffect(() => {
-    //    fetch(`http://localhost:3001/get_districts?search=${search.value}`)
-    //    .then(resp => resp.json())
-    //     .then(data => {
-    //        if (data.error){
-    //            console.log("Something went wrong.")
-    //        } else {
-    //             updateSearchForm(data)
-    //        }
-    //    })
-    //},[search, updateSearchForm])
+    const fetchDistrict = () => {
+        fetch(`http://localhost:3001/get_districts?search=${search.value}`)
+        .then(resp => resp.json())
+         .then(data => {
+            if (data.error){
+                console.log("Something went wrong.")
+            } else {
+                 updateSearchForm(data)
+            }
+        })
+    }
 
     const handleOnChange = event => {
         event.preventDefault();
