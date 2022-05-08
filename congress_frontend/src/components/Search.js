@@ -11,7 +11,7 @@ const Search = ({ search, district, updateSearchForm, setDistrict }) => {
         if (initialMount.current){
             initialMount.current = false;
         } else {
-            console.log(district)
+            fetchDistrict()
         }
     })
     
