@@ -3,16 +3,16 @@ import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
-const Search = ({ search, updateSearchForm, setDistrict }) => {
+const Search = ({ search, district, updateSearchForm, setDistrict }) => {
     
     const fetchDistrict = () => {
-        fetch(`http://localhost:3001/get_districts?search=${search.value}`)
+        fetch(`http://localhost:3001/get_districts?search=${district.address}`)
         .then(resp => resp.json())
          .then(data => {
             if (data.error){
                 console.log("Something went wrong.")
             } else {
-                 updateSearchForm(data)
+                 console.log(data)
             }
         })
     }
