@@ -4,17 +4,17 @@ import { updateSearchForm } from '../actions/search';
 
 const Search = ({ search, updateSearchForm }) => {
     
-    useEffect(() => {
-        fetch(`http://localhost:3001/get_districts?search=${search.value}`)
-        .then(resp => resp.json())
-         .then(data => {
-            if (data.error){
-                console.log("Something went wrong.")
-            } else {
-                 updateSearchForm(data)
-            }
-        })
-    },[search, updateSearchForm])
+    //useEffect(() => {
+    //    fetch(`http://localhost:3001/get_districts?search=${search.value}`)
+    //    .then(resp => resp.json())
+    //     .then(data => {
+    //        if (data.error){
+    //            console.log("Something went wrong.")
+    //        } else {
+    //             updateSearchForm(data)
+    //        }
+    //    })
+    //},[search, updateSearchForm])
 
     const handleOnChange = event => {
         event.preventDefault();
@@ -36,6 +36,10 @@ const Search = ({ search, updateSearchForm }) => {
                     onChange={handleOnChange}
                     value={search.value}
                 />
+                <input
+                    type="submit"
+                    value="Search"
+                >Search</input>
             </form>
         </div>
     )
