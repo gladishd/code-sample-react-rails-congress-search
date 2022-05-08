@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
-const Search = ({ search, updateSearchForm }) => {
+const Search = ({ search, updateSearchForm, setDistrict }) => {
     
     //useEffect(() => {
     //    fetch(`http://localhost:3001/get_districts?search=${search.value}`)
@@ -57,4 +57,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateSearchForm})(Search);
+export default connect(mapStateToProps, { updateSearchForm, setDistrict })(Search);
