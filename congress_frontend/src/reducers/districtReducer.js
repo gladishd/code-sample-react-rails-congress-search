@@ -1,8 +1,4 @@
-const initState = {
-    address: ""
-}
-
-const districtReducer = (state = initState, action) => {
+const districtReducer = (state = [], action) => {
     switch(action.type){
         case "SET_DISTRICT":
             return action.district
