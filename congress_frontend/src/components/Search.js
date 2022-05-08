@@ -6,7 +6,7 @@ import { setDistrict } from '../actions/district';
 const Search = ({ search, district, updateSearchForm, setDistrict }) => {
     
     const fetchDistrict = () => {
-        fetch(`http://localhost:3001/get_districts?search=${district.address}`)
+        fetch(`http://localhost:3001/get_districts?search=${district}`)
         .then(resp => resp.json())
          .then(data => {
             if (data.error){
