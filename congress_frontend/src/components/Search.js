@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
 const Search = ({ search, district, updateSearchForm, setDistrict }) => {
+    
+    const initialMount = useRef(true);
+
+    useEffect(() => {
+        if (initialMount.current){
+            initialMount.current = false;
+        } else {
+            console.log(district)
+        }
+    })
+    
     
     const fetchDistrict = () => {
         fetch(`http://localhost:3001/get_districts?search=${district}`)
@@ -17,20 +28,10 @@ const Search = ({ search, district, updateSearchForm, setDistrict }) => {
         })
     }
 
-    const handleOnChange = event => {
-        event.preventDefault();
-        const value = event.target.value;
-        const updatedData = {
-            ...search,
-            value
-        };
-        updateSearchForm(updatedData);
-    }
-
     const handleSubmit = event => {
         event.preventDefault();
-        setDistrict(search.value);
-        //fetchDistrict();
+        const searchValue = event.target[0].value
+        setDistrict(searchValue);
     }
 
     return(
@@ -40,8 +41,6 @@ const Search = ({ search, district, updateSearchForm, setDistrict }) => {
                     type="text"
                     className="form-entry"
                     placeholder="Your Address Here..."
-                    onChange={handleOnChange}
-                    value={search.value}
                 />
                 <input
                     type="submit"
