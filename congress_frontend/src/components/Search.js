@@ -16,14 +16,19 @@ const Search = ({ search, updateSearchForm }) => {
     //    })
     //},[search, updateSearchForm])
 
-    const handleOnChange = event => {
+    //const handleOnChange = event => {
+    //    event.preventDefault();
+    //    const value = event.target.value;
+    //    const updatedData = {
+    //        ...search,
+    //        value
+    //    };
+    //    updateSearchForm(updatedData);
+    //}
+
+    const handleSubmit = event => {
         event.preventDefault();
-        const value = event.target.value;
-        const updatedData = {
-            ...search,
-            value
-        };
-        updateSearchForm(updatedData);
+        const value = event.target.value
     }
 
     return(
@@ -33,7 +38,7 @@ const Search = ({ search, updateSearchForm }) => {
                     type="text"
                     className="form-entry"
                     placeholder="Your Address Here..."
-                    onChange={handleOnChange}
+                    //onChange={handleOnChange}
                     value={search.value}
                 />
                 <input
