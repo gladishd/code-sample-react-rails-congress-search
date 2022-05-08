@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
+import { setDistrict } from '../actions/district';
 
 const Search = ({ search, updateSearchForm }) => {
     
@@ -28,6 +29,7 @@ const Search = ({ search, updateSearchForm }) => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        console.log(search)
     }
 
     return(
