@@ -29,11 +29,12 @@ const Search = ({ search, updateSearchForm }) => {
     const handleSubmit = event => {
         event.preventDefault();
         const value = event.target.value
+        console.log(value)
     }
 
     return(
         <div className="search-bar">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     className="form-entry"
