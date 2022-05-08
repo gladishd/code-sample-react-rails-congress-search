@@ -4,9 +4,11 @@ import thunk from 'redux-thunk';
 // REDUCERS
 
 import searchReducer from './reducers/searchReducer.js';
+import districtReducer from './reducers/districtReducer.js';
 
 const reducers = combineReducers({
-    searchReducer
+    searchReducer,
+    districtReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; 
