@@ -1,4 +1,5 @@
 import './App.css';
+import { connect } from 'react-redux';
 import Search from './components/Search.js';
 import ResultsCard from './components/ResultsCard.js';
 
@@ -18,4 +19,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
