@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import Search from './components/Search.js';
 import ResultsCard from './components/ResultsCard.js';
 
-function App() {
+function App({ district }) { 
   return (
     <div className="App">
       <h1>Congress Search</h1>
       <Search />
-      <ResultsCard />
+      { district === '' ? '' : <ResultsCard /> }
     </div>
   );
 }
