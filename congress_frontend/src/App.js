@@ -12,4 +12,10 @@ function App() {
   );
 }
 
+const mapStateToProps = state => {
+  return {
+    district: state.districtReducer
+  }
+}
+
 export default App;
