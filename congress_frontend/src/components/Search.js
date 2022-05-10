@@ -42,13 +42,16 @@ const Search = ({ district, setDistrict }) => {
     return(
         <div className="search-bar">
             <form onSubmit={handleSubmit}>
-                <input 
-                    type="text"
-                    className="form-entry"
-                    placeholder="Your Address Here..."
-                />
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        className="form-control"
+                        placeholder="Your Address Here..."
+                    />
+                </div>
                 <input
                     type="submit"
+                    class="btn btn-dark"
                     value="Search"
                 />
             </form>
