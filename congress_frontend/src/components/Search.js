@@ -16,7 +16,13 @@ const Search = ({ district, setDistrict }) => {
     
     
     const fetchDistrict = () => {
-        fetch(`http://localhost:3001/get_districts?search=${district}`)
+        fetch(`http://localhost:3001/get_districts?search=${district}`, {
+            mode: "no-cors",
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
         .then(resp => resp.json())
          .then(data => {
             if (data.error){
