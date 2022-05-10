@@ -39,6 +39,11 @@
 
 .App {
   margin: auto;
+  margin-top: 20px;
   width: 75%;
   padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  border-color: darkgray;
 }
