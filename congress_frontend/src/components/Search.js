@@ -17,20 +17,20 @@ const Search = ({ district, setDistrict }) => {
     
     const fetchDistrict = () => {
         fetch(`http://localhost:3001/get_districts?search=${district}`, {
-            mode: "no-cors",
+            mode: "cors",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             }
         })
-        .then(resp => resp.json())
-         .then(data => {
-            if (data.error){
-                console.log("Something went wrong.")
-            } else {
-                 console.log(data)
-            }
-        })
+        .then(resp => console.log(resp))
+        //.then(data => {
+        //    if (data.error){
+        //        console.log("Something went wrong.")
+        //    } else {
+        //         console.log(data)
+        //    }
+        //})
     }
 
     const handleSubmit = event => {
