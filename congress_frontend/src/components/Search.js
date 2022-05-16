@@ -42,7 +42,7 @@ const Search = ({ district, setDistrict }) => {
     return(
         <div className="search-bar">
             <form onSubmit={handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <input 
                         type="text"
                         className="form-control"
@@ -51,7 +51,7 @@ const Search = ({ district, setDistrict }) => {
                 </div>
                 <input
                     type="submit"
-                    class="btn btn-dark"
+                    className="btn btn-dark"
                     value="Search"
                 />
             </form>
