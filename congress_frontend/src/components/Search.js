@@ -17,7 +17,6 @@ const Search = ({ district, setDistrict }) => {
     
     const fetchDistrict = () => {
         fetch(`http://localhost:3001/get_districts?search=${district}`, {
-            mode: "cors",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
