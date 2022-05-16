@@ -16,3 +16,8 @@ end
 ## params["search"] gets correct data from form, but does not allow that data to be passed into .geocode() method
 ## Do I need a Strong Params for search?
 ## Do I need to add a 'search' attribute to database?
+
+## 1. On submit, form sends request to get_districts route.
+## 2. Request Method is GET, status code is 200 ok. 
+## 3. Payload is accurate, reflects search form entry. 
+## 4. Response: Failed to load response data: No data for resource with given identifier
