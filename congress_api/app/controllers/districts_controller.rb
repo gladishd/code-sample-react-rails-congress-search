@@ -21,3 +21,5 @@ end
 ## 2. Request Method is GET, status code is 200 ok. 
 ## 3. Payload is accurate, reflects search form entry. 
 ## 4. Response: Failed to load response data: No data for resource with given identifier
+
+## Is my issue related to the CORS issue I've been having?
