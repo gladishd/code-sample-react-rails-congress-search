@@ -6,13 +6,11 @@ class DistrictsController < ApplicationController
         addressString2 = params["search"]
         addressString = "1600 Pennsylvania Ave Washington, DC"
         geocodio = Geocodio::Client.new(ENV["API_KEY"])
-        location = geocodio.geocode([addressString2], fields: %w[cd]).best
+        location = geocodio.geocode([addressString], fields: %w[cd]).best
         district = location.congressional_districts
-        
-        #newDistrict = District.create(
-        #    name: district[0].name,
-        #    number: district[0].district_number 
-        #)
+
         render json: district
     end
 end
+
+
