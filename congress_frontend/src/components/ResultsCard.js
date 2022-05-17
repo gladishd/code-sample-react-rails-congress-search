@@ -12,4 +12,10 @@ const ResultsCard = () => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        district: state.districtReducer
+    }
+}
+
 export default ResultsCard;
