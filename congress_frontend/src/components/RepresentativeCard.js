@@ -3,7 +3,7 @@ import React from 'react';
 const RepresentativeCard = (props) => {
 
     const rep = props.rep
-    
+    console.log(rep)
     const capitalizeFirst = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }

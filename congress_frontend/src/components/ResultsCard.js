@@ -5,7 +5,7 @@ import RepresentativeCard from './RepresentativeCard.js';
 const ResultsCard = ({ district }) => {
     
     const repsCards = district[0].current_legislators.length > 0 ? 
-        district[0].current_legislators.map(rep => <RepresentativeCard key={rep.id} rep={rep} />) : <div />
+        district[0].current_legislators.map(rep => <RepresentativeCard key={rep.govtrack_id} rep={rep} />) : <div />
     
     return(
         <div className="results">
