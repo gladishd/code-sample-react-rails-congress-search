@@ -8,30 +8,29 @@ const Search = ({ search, updateSearchForm, district, setDistrict }) => {
     const initialMount = useRef(true);
 
     useEffect(() => {
+        const fetchDistrict = () => {
+            fetch(`http://localhost:3001/get_districts?search=${search}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(resp => resp.json())
+            .then(data => {
+                if (data.error){
+                    console.log("Something went wrong.")
+                } else {
+                    setDistrict(data)
+                }
+            })
+        }
+
         if (initialMount.current){
             initialMount.current = false;
         } else {
             fetchDistrict()
         }
-    })
-    
-    
-    const fetchDistrict = () => {
-        fetch(`http://localhost:3001/get_districts?search=${search}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(resp => resp.json())
-        .then(data => {
-            if (data.error){
-                console.log("Something went wrong.")
-            } else {
-                setDistrict(data)
-            }
-        })
-    }
+    }, [fetchDistrict])
 
     const handleSubmit = event => {
         event.preventDefault();

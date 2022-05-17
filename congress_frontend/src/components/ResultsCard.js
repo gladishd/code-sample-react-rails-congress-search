@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import RepresentativeCard from './RepresentativeCard.js';
 
-const ResultsCard = () => {
-
+const ResultsCard = ({ district }) => {
+    
     return(
         <div className="results">
             <div className="row">
-            <h3>Your District:</h3>
+                <h3>Your District:</h3>
             </div>
         </div>
     )
