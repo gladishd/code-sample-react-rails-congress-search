@@ -47,3 +47,12 @@
   border-radius: 25px;
   border-color: darkgray;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: space-between;
+  padding: 20px;
+}
+
