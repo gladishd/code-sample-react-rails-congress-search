@@ -7,7 +7,7 @@ const ResultsCard = ({ district }) => {
     return(
         <div className="results">
             <div className="row">
-                <h3>Your District:</h3>
+                <h3>{district[0].name}</h3>
             </div>
         </div>
     )
