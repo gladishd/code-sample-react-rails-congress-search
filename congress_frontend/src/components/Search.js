@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
+import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
 const Search = ({ district, setDistrict }) => {
@@ -64,4 +65,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { setDistrict })(Search);
+export default connect(mapStateToProps, { setDistrict, updateSearchForm })(Search);
