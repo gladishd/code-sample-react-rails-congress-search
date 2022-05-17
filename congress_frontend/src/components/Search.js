@@ -61,6 +61,7 @@ const Search = ({ district, setDistrict }) => {
 
 const mapStateToProps = state => {
     return {
+        search: state.searchReducer,
         district: state.districtReducer
     }
 }
