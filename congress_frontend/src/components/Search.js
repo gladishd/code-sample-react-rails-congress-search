@@ -28,7 +28,7 @@ const Search = ({ search, updateSearchForm, district, setDistrict }) => {
             if (data.error){
                 console.log("Something went wrong.")
             } else {
-                console.log(data)
+                setDistrict(data)
             }
         })
     }
