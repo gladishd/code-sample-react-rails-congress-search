@@ -17,7 +17,7 @@ const Search = ({ search, updateSearchForm, district, setDistrict }) => {
     
     
     const fetchDistrict = () => {
-        fetch(`http://localhost:3001/get_districts?search=${district}`, {
+        fetch(`http://localhost:3001/get_districts?search=${search}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -36,7 +36,7 @@ const Search = ({ search, updateSearchForm, district, setDistrict }) => {
     const handleSubmit = event => {
         event.preventDefault();
         const searchValue = event.target[0].value
-        setDistrict(searchValue);
+        updateSearchForm(searchValue);
     }
 
     return(
