@@ -30,7 +30,7 @@ const Search = ({ search, updateSearchForm, district, setDistrict }) => {
         } else {
             fetchDistrict()
         }
-    }, [district])
+    }, [search, setDistrict])
 
     const handleSubmit = event => {
         event.preventDefault();
