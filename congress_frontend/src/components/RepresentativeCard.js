@@ -1,10 +1,17 @@
 import React from 'react';
 
-const RepresentativeCard = () => {
+const RepresentativeCard = (props) => {
+
+    const rep = props.rep
+    
+    const capitalizeFirst = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     return(
         <div className="card">
             <div className="card-body">
-                    <h5 className="card-title">Representative:</h5>
+                    <h5 className="card-title">{rep.name}</h5>
                     <p className="card-text">Party:</p>
                     <p className="card-text">Website:</p>
                     <p className="card-text">Address:</p>
