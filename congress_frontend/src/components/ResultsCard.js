@@ -11,6 +11,7 @@ const ResultsCard = ({ district }) => {
         <div className="results">
             <div className="row">
                 <h3>{district[0].name}</h3>
+                { repsCards }
             </div>
         </div>
     )
