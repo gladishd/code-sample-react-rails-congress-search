@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
-const Search = ({ district, setDistrict }) => {
+const Search = ({ search, updateSearchForm, district, setDistrict }) => {
     
     const initialMount = useRef(true);
 
