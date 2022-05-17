@@ -18,4 +18,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default ResultsCard;
+export default connect(mapStateToProps)(ResultsCard);
