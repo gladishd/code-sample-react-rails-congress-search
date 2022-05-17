@@ -22,14 +22,14 @@ const Search = ({ district, setDistrict }) => {
                 "Content-Type": "application/json"
             }
         })
-        .then(resp => console.log(resp))
-        //.then(data => {
-        //    if (data.error){
-        //        console.log("Something went wrong.")
-        //    } else {
-        //         console.log(data)
-        //    }
-        //})
+        .then(resp => resp.json())
+        .then(data => {
+            if (data.error){
+                console.log("Something went wrong.")
+            } else {
+                console.log(data)
+            }
+        })
     }
 
     const handleSubmit = event => {
