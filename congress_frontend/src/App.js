@@ -7,10 +7,12 @@ import Instructions from './components/Instructions.js';
 function App({ district }) { 
   return (
     <div className="App">
-      <h1>Congress Search</h1>
-      <Instructions />
-      <Search />
-      { district === '' ? '' : <ResultsCard /> }
+      <div className="app-container">
+        <h1>Congress Search</h1>
+        <Instructions />
+        <Search />
+        { district === '' ? '' : <ResultsCard /> }
+      </div>
     </div>
   );
 }
