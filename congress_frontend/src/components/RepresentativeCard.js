@@ -28,6 +28,15 @@ const RepresentativeCard = (props) => {
                     <p className="card-text">Twitter: {rep.twitter}</p>
                     <p className="card-text">Facebook: {rep.facebook}</p>
                     <p className="card-text">Youtube: {rep.youtube}</p>
+                    <button className="btn btn-primary">
+                        <i class="bi bi-facebook"> </i>
+                    </button>
+                    <button className="btn btn-warning">
+                        <i class="bi bi-twitter"> </i>
+                    </button>
+                    <button className="btn btn-success">
+                        <i class="bi bi-youtube"> </i>
+                    </button>
                 </div>
             </div>
         </div>
