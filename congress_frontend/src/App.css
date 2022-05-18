@@ -61,3 +61,7 @@
   width: 80%;
   margin: auto;
 }
+
+.card-body {
+  background-color: rgb(254, 254, 255);
+}
