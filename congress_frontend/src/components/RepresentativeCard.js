@@ -8,8 +8,9 @@ const RepresentativeCard = (props) => {
     }
 
     return(
-        <div className="card">
-            <div className="card-body">
+        <div className="col">
+            <div className="card">
+                <div className="card-body">
                     <h5 className="card-title">{capitalizeFirst(rep.type)} {rep.name}</h5>
                     <p className="card-text">{rep.party}</p>
                     <p className="card-text"><a href={rep.url}>Website</a></p>
@@ -20,6 +21,7 @@ const RepresentativeCard = (props) => {
                     <p className="card-text">Youtube: {rep.youtube}</p>
                     <p className="card-text">Birthday: {rep.birthday}</p>
                 </div>
+            </div>
         </div>
     )
 }
