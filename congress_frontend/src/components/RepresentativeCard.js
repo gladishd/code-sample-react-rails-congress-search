@@ -29,9 +29,6 @@ const RepresentativeCard = (props) => {
                         {rep.address}
                     </p>
                     <p className="card-text"><a href={rep.url} className="text-decoration-none link-info">Website</a></p>
-                    <p className="card-text">Twitter: {rep.twitter}</p>
-                    <p className="card-text">Facebook: {rep.facebook}</p>
-                    <p className="card-text">Youtube: {rep.youtube}</p>
                     <a href={facebook} className="btn btn-primary">
                         <i className="bi bi-facebook"></i>
                     </a>
