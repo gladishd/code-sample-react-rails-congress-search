@@ -7,6 +7,10 @@ const RepresentativeCard = (props) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
+    const twitter = `http://www.twitter.com/${rep.twitter}`
+    const facebook = `http://www.facebook.com/${rep.facebook}`
+    const youtube = `http://www.youtube.com/${rep.youtube}`
+
     return(
         <div className="col">
             <div className="card">
@@ -29,13 +33,13 @@ const RepresentativeCard = (props) => {
                     <p className="card-text">Facebook: {rep.facebook}</p>
                     <p className="card-text">Youtube: {rep.youtube}</p>
                     <button className="btn btn-primary">
-                        <i class="bi bi-facebook"> </i>
+                        <i className="bi bi-facebook"></i>
                     </button>
                     <button className="btn btn-warning">
-                        <i class="bi bi-twitter"> </i>
+                        <i className="bi bi-twitter"></i>
                     </button>
                     <button className="btn btn-success">
-                        <i class="bi bi-youtube"> </i>
+                        <i className="bi bi-youtube"></i>
                     </button>
                 </div>
             </div>
