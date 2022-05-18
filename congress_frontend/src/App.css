@@ -65,3 +65,7 @@
 .card-body {
   background-color: rgb(254, 254, 255);
 }
+
+.district-name {
+  padding-bottom: 34px;
+}
