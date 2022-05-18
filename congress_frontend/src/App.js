@@ -8,7 +8,7 @@ function App({ district }) {
   return (
     <div className="App">
       <div className="app-container">
-        <h1>Congress Search</h1>
+        <h1 className="app-title">Congress Search</h1>
         <Instructions />
         <Search />
         { district === '' ? '' : <ResultsCard /> }
