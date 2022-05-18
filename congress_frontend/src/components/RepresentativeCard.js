@@ -29,15 +29,23 @@ const RepresentativeCard = (props) => {
                         {rep.address}
                     </p>
                     <p className="card-text"><a href={rep.url} className="text-decoration-none link-info">Website</a></p>
-                    <a href={facebook} className="btn btn-primary">
-                        <i className="bi bi-facebook"></i>
-                    </a>
-                    <a href={twitter} className="btn btn-warning">
-                        <i className="bi bi-twitter"></i>
-                    </a>
-                    <a href={youtube} className="btn btn-success">
-                        <i className="bi bi-youtube"></i>
-                    </a>
+                    <div className="row">
+                        <div className="col">
+                            <a href={facebook} className="btn btn-primary">
+                                <i className="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                        <div className="col">
+                            <a href={twitter} className="btn btn-warning">
+                                <i className="bi bi-twitter"></i>
+                            </a>
+                        </div>
+                        <div className="col">
+                            <a href={youtube} className="btn btn-success">
+                                <i className="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
