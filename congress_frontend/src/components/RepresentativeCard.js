@@ -13,13 +13,21 @@ const RepresentativeCard = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{capitalizeFirst(rep.type)} {rep.name}</h5>
                     <p className="card-text">{rep.party}</p>
-                    <p className="card-text"><a href={rep.url}>Website</a></p>
-                    <p className="card-text">{rep.address}</p>
-                    <p className="card-text">{rep.phone}</p>
+                    <p className="card-text"><i>Birthdate:</i> {rep.birthday}</p>
+                    <p className="card-text">
+                        <i>Phone:</i> 
+                        <br /> 
+                        {rep.phone}
+                    </p>
+                    <p className="card-text">
+                        <i>Address:</i>
+                        <br />
+                        {rep.address}
+                    </p>
+                    <p className="card-text"><a href={rep.url} className="text-decoration-none link-info">Website</a></p>
                     <p className="card-text">Twitter: {rep.twitter}</p>
                     <p className="card-text">Facebook: {rep.facebook}</p>
                     <p className="card-text">Youtube: {rep.youtube}</p>
-                    <p className="card-text">Birthday: {rep.birthday}</p>
                 </div>
             </div>
         </div>
