@@ -41,18 +41,20 @@ const Search = ({ search, updateSearchForm, setDistrict }) => {
     return(
         <div className="search-bar">
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="input-group mb-3">
                     <input 
                         type="text"
                         className="form-control"
                         placeholder="Your Address Here..."
                     />
+                    <div class="input-group-append">
+                        <input
+                            type="submit"
+                            className="btn btn-dark"
+                            value="Search"
+                        />
+                    </div>
                 </div>
-                <input
-                    type="submit"
-                    className="btn btn-dark"
-                    value="Search"
-                />
             </form>
         </div>
     )
