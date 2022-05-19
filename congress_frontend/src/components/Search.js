@@ -4,7 +4,7 @@ import { updateSearchForm } from '../actions/search';
 import { setDistrict } from '../actions/district';
 
 const Search = ({ search, updateSearchForm, setDistrict }) => {
-    // TEST
+
     const initialMount = useRef(true);
 
     useEffect(() => {
