@@ -160,7 +160,7 @@ DEPENDENCIES
   dotenv-rails
   geocodio
   listen (~> 3.3)
-  nokogiri (>= 1.13.5)
+  nokogiri (>= 1.13.6)
   puma (~> 5.0)
   rack-cors
   rails (~> 6.1.5)
